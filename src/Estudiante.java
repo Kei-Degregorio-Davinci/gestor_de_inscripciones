@@ -16,7 +16,7 @@ public class Estudiante extends Persona {
     }
 
     public void inscribirCurso(Curso curso){
-        
+
     }
 
     public ArrayList<Materia> getMaterias() {
