@@ -1,0 +1,66 @@
+@startuml
+class Materia {
+- String nombre
+- ArrayList<Materia> correlativas
+- ArrayList<Curso> cursos
++ <<Create>> Materia(String)
++ String getNombre()
++ void setNombre(String)
++ ArrayList<Materia> getCorrelativas()
++ void setCorrelativas(ArrayList<Materia>)
++ ArrayList<Curso> getCursos()
++ void setCursos(ArrayList<Curso>)
++ void agregarCorrelativas(Materia)
++ void agregarCurso(Curso)
+}
+class Curso {
+- Date horario
+- Materia materia
+- Profesor profesor
+- ArrayList<Estudiante> estudiante
++ <<Create>> Curso(Date,Materia,Profesor)
++ Date getHorario()
++ void setHorario(Date)
++ Materia getMateria()
++ void setMateria(Materia)
++ Profesor getProfesor()
++ void setProfesor(Profesor)
++ ArrayList<Estudiante> getEstudiante()
++ void setEstudiante(ArrayList<Estudiante>)
++ void agregarEstudiante(Estudiante)
+}
+class Profesor {
+- ArrayList<Curso> cursos
+~ <<Create>> Profesor(int,String)
++ ArrayList<Curso> getCursos()
++ void setCursos(ArrayList<Curso>)
++ void asignarCurso(Curso)
+}
+class Main {
++ {static} void main(String[])
+}
+class Estudiante {
+- ArrayList<Materia> materias
+- ArrayList<Curso> cursos
+~ <<Create>> Estudiante(int,String)
++ void inscribirMateria(Materia)
++ void inscribirCurso(Curso)
++ ArrayList<Materia> getMaterias()
++ void setMaterias(ArrayList<Materia>)
++ ArrayList<Curso> getCursos()
++ void setCursos(ArrayList<Curso>)
+}
+class Persona {
+- int dni
+- String nombre
++ <<Create>> Persona(int,String)
++ int getDni()
++ void setDni(int)
++ String getNombre()
++ void setNombre(String)
+}
+
+
+Persona <|-- Profesor
+Persona <|-- Estudiante
+@enduml

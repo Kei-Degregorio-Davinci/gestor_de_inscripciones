@@ -11,6 +11,7 @@ public class Curso {
         this.horario = horario;
         this.materia = materia;
         this.profesor = profesor;
+        this.estudiante = new ArrayList<Estudiante>();
     }
 
     public Date getHorario() {
