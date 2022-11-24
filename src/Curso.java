@@ -46,7 +46,8 @@ public class Curso {
     }
 
     public void agregarEstudiante(Estudiante estudiante){
-        
+        this.estudiante.add(estudiante);
+
     }
 
 }

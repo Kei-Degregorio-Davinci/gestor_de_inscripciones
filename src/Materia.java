@@ -5,6 +5,10 @@ public class Materia {
     private ArrayList<Materia> correlativas;
     private ArrayList<Curso> cursos;
 
+    public Materia(String nombre) {
+        this.nombre = nombre;
+    }
+
     public String getNombre() {
         return nombre;
     }
