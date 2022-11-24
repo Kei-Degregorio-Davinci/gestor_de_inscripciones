@@ -17,7 +17,7 @@ public class Profesor extends Persona{
     }
 
     public void asignarCurso(Curso curso){
-        
+
 
     }
 
